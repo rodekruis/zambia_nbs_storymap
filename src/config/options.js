@@ -2,7 +2,7 @@ const center = [27.1413635, -15.484146];
 const pitch = 0;
 const bearing = 0;
 const zoom = 7.8;
-const maxZoom = 15;
+const maxZoom = 9;
  
 const chapters = {
   climate_current: {

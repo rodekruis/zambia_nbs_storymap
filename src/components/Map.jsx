@@ -408,23 +408,23 @@ export default class Map extends React.Component {
             features: [{
               type: 'Feature',
               properties: {
-                name: 'Marikina River',
+                name: ' Kafue flats', 
                 size: 12,
               },
               geometry: {
                 type: 'Point',
-                coordinates: [121.08634085311045, 14.634044503866145],
+                coordinates: [27.202148437500004, -15.527790862993784],                
               },
             },
             {
               type: 'Feature',
               properties: {
-                name: 'Marikina City',
-                size: 20,
+                name: 'Barotse plains',
+                size: 12,
               },
               geometry: {
                 type: 'Point',
-                coordinates: [121.10887595008319, 14.652422188794105],
+                coordinates: [22.972412109375, -14.93416989934271],
               },
             }],
           },
