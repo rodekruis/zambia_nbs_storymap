@@ -62,7 +62,7 @@ export default class Panel extends React.Component {
     return (
       <div id="features" onScroll={this.handleScroll}>
         <section id="marikina" className="active">
-          <Typography variant="h4">Zambia NBS Project</Typography>
+          <Typography variant="h5">Zambia NBS Project</Typography>
           <Typography>Nature-based solutions (NBS) are interventions that work with, rather than against, nature to address societal challenges. In the case of disaster risk reduction, NBS can help to reduce the impact of natural disasters by enhancing the natural resilience of ecosystems and communities.The NBs project is currently in site selection stage for the desktop research.
           NBs project is considering existing flood and drought risks on humans and biodiversity during the site selection stage. This approach can help to minimize the negative impacts of the project on the environment and local communities. To guide the desktop research site selection process, we will consider the following steps:
           <ul>
@@ -82,23 +82,34 @@ export default class Panel extends React.Component {
           <br></br>
           <Typography variant="h6"> FLOOD &amp; DROUGHT RISK</Typography>
           <Typography>
-          Zambia is vulnerable to both flood and drought risks due to its location in southern Africa, where climate variability and extreme weather events are common. The country's climate is largely characterized by a wet season from November to April and a dry season from May to October. During the wet season, heavy rainfall can lead to flooding in low-lying areas, causing displacement, destruction of infrastructure, and loss of livelihoods. In recent years, Zambia has experienced several severe floods, including in 2007, 2010, 2017, 2019, and 2023. These floods have affected thousands of people and caused significant damage to infrastructure and crops. On the other hand, during the dry season, the lack of rainfall can lead to drought conditions, which can severely impact agriculture, water resources, and health. Droughts can result in crop failures, livestock deaths, and water scarcity, leading to food insecurity and malnutrition. In 2019, Zambia declared a national disaster due to a severe drought that affected over <span class="highlight">2.3 million</span>  people. Climate change is expected to exacerbate the flood and drought risks in Zambia, with projected increases in the frequency and intensity of extreme weather events. Addressing these risks will require a combination of measures, this project will conduct a desktop study to identify nature-based solutions to address these risks.    .        
+          Zambia is vulnerable to both flood and drought risks due to its location in southern Africa, where climate variability and extreme weather events are common. The country's climate is largely characterized by a wet season from November to April and a dry season from May to October. During the wet season, heavy rainfall can lead to flooding in low-lying areas, causing displacement, destruction of infrastructure, and loss of livelihoods. In recent years, Zambia has experienced several severe floods, including in <span class="highlight">2007, 2010, 2017, 2019, and 2023</span> . These floods have affected thousands of people and caused significant damage to infrastructure and crops. On the other hand, during the dry season, the lack of rainfall can lead to drought conditions, which can severely impact agriculture, water resources, and health. Droughts can result in crop failures, livestock deaths, and water scarcity, leading to food insecurity and malnutrition. In <span class="highlight">2019</span>, Zambia declared a national disaster due to a severe drought that affected over <span class="highlight">2.3 million</span>  people. Climate change is expected to exacerbate the flood and drought risks in Zambia, with projected increases in the frequency and intensity of extreme weather events. Addressing these risks will require a combination of measures, this project will conduct a desktop study to identify nature-based solutions to address these risks.    
+          <br></br>    
+          </Typography>
+          <Typography variant="h6"> COMBINED RISK SCORE FOR FLOOD &amp; DROUGHT</Typography>
+          <Typography>
+          Below, we describe the methodology used to calculate the combined risk score for drought and flood hazards in a particular district. The methodology involves the following steps:
+          <ul>
+            <li>Collecting historical data on reported drought and flood impacts in the district, which helps to understand the frequency of these impactful hazards.</li>
+            <li>Using this data, calculating the frequency of occurrence of droughts and floods in the district. This frequency is a measure of how often impact from these hazards have been reported in the past.</li>
+            <li>Normalizing the frequency of occurrence of each hazard. This means adjusting the frequency score to a common scale, so that the risk score for both hazards can be compared fairly.</li>
+            <li>Calculating the risk score for each hazard based on the normalized frequency. The risk score is a measure of how likely the hazard is to occur in the future.</li>
+            <li>Finally, calculating the combined risk score for both hazards by taking the average of the two scores. This gives an overall measure of the risk of experiencing either a drought or a flood in the district.</li>
+          </ul>
+          Overall, this process helps to understand the risk of experiencing drought or flood in a particular district based on historical data, it can be used to inform decisions on prioritizing the most affected areas for the desktop research of the NBS project.
           </Typography>
          </section>
-
-        <section id="conclusion">
-
-          <Typography variant="h6">Project Partners </Typography>
+         <Typography variant="h7">Project implementation Partners </Typography>
           <Typography>
             <ul>
-              <li>The Netherlands Red Cross</li>
-              <li>WWF Netherlands</li>
-              <li>WWF Zambia</li>
-              <li>Zambia Red Cross Society </li>
+            <li> <a href="https://www.rodekruis.nl/en/" target="_blank">Rode Kruis</a></li>
+            <li> <a href="https://www.wwf.nl/" target="_blank">WWF Netherlands</a></li>
+            <li> <a href="https://www.wwfzm.panda.org/" target="_blank">WWF Zambia</a></li>
+            <li> <a href="https://www.redcross.org.zm/" target="_blank">Zambia Red Cross Society</a></li>
+            <li> <a href="https://www.510.global/" target="_blank">The Netherlands Red Cross</a></li>
             </ul>
           </Typography>
 
-        </section>
+
       </div>
     );
   }

@@ -17,7 +17,7 @@ export default class Map extends React.Component {
     this.state = {
       lat: -15.488839,//14.639452415446272,
       lng: 27.14493,//121.10270229817115,
-      zoom: 5,
+      zoom: 6.3,
     };
   }
 
@@ -34,7 +34,7 @@ export default class Map extends React.Component {
       style: 'mapbox://styles/510global/clfl4ijaz000f01o5yhs0l9z6',
       center: [lng, lat],
       zoom,
-      minZoom: 1,
+      minZoom: 3,
       maxZoom: 15,
       pitch: 0,
       bearing: 0,
@@ -42,22 +42,25 @@ export default class Map extends React.Component {
 
     this.map.addControl(new mapboxgl.NavigationControl(), 'top-right');
     this.map.on('style.load', () => {
-      this.map.addSource('riesgo', {
-        type: 'vector',
-        url: 'mapbox://unissechua.8kcfu1fc',
-      });     
       this.map.addSource('riskmap', {
         type: 'geojson',
         data: 'data/ZMB_historical_disaster.geojson',
       });
+
       this.map.addSource('studyarea', {
         type: 'geojson',
         data: 'data/areas.geojson',
       });
+
       this.map.addSource('basins', {
         type: 'geojson',
         data: 'data/basins.geojson',
       });
+
+      this.map.addSource('riesgo', {
+        type: 'vector',
+        url: 'mapbox://unissechua.8kcfu1fc',
+      });  
 
       this.map.addSource('evacuation', {
         type: 'vector',
@@ -98,6 +101,30 @@ export default class Map extends React.Component {
         type: 'geojson',
         data: 'data/areas_of_interest.geojson',
       });
+      
+      this.map.addLayer({
+        id: 'riskmap',
+        type: 'fill',
+        source: 'riskmap',
+        'source-layer': 'COMBINED_R',
+        paint: {
+          'fill-color': {
+            property: 'value',
+            stops: [
+              [0.2, '#ffffff'],
+              [0.40, '#ffbfbf'],
+              [0.55, '#ff8080'],
+              [0.72, '#ff4040'],
+              [0.90, '#ff0000'],
+            ],
+          },
+          'fill-opacity': 0,
+          'fill-opacity-transition': {
+            duration: 800,
+            delay: 0,
+          },
+        },
+      }, 'waterway');
 
       this.map.addLayer({
         id: 'studyarea',
@@ -397,7 +424,7 @@ export default class Map extends React.Component {
           'fill-outline-color': '#38316e',
         },
       }, 'waterway');
-
+      
       this.map.addLayer({
         id: 'labels',
         type: 'symbol',
